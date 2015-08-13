@@ -1,0 +1,8 @@
+<% for (var item in parsed) { %>
+class TestClass {
+
+<% for(var prop in parsed[item]){ %>
+    private <%= parsed[item][prop].type %> <%= parsed[item][prop].name %>;
+<% } %>
+}
+<% } %>
